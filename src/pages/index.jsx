@@ -5,8 +5,7 @@ import Layout from "../components/layout";
 
 const IndexPage = () => (
   <Layout>
-    <h1>Welcome</h1>
-    <p>Now go build something great.</p>
+    <h1>Game Randomizers</h1>
     <Link to="/random/1822plus/">1822+</Link>
   </Layout>
 );
