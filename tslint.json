@@ -1,8 +1,12 @@
 {
-  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
+  "extends": [
+    "tslint:latest",
+    "tslint-immutable",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
   "rules": {
     "interface-name": false,
-    "prettier": true,
     "typedef": [
       true,
       "call-signature",
@@ -10,6 +14,15 @@
       "property-declaration",
       "member-variable-declaration",
       "variable-declaration"
-    ]
+    ],
+    "no-var-keyword": true,
+    "no-parameter-reassignment": true,
+    "typedef": [true, "call-signature"],
+    "readonly-keyword": true,
+    "readonly-array": true,
+    "no-let": true,
+    "no-object-mutation": true,
+    "no-delete": true,
+    "no-method-signature": true
   }
 }
