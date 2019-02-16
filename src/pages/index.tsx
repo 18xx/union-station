@@ -1,9 +1,9 @@
-import React from "react";
 import { Link } from "gatsby";
+import React from "react";
 
 import Layout from "../components/layout";
 
-const IndexPage = () => (
+const IndexPage: React.SFC = () => (
   <Layout>
     <h1>Game Randomizers</h1>
     <Link to="/random/1822plus/">1822+</Link>

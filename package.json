@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "union-station",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple website to provide utlities to help people play 18xx board games",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Gregor MacDougall <gmacdougall0@gmail.com>",
   "dependencies": {
     "gatsby": "^2.0.118",
     "gatsby-image": "^2.0.29",
@@ -11,13 +11,15 @@
     "gatsby-plugin-offline": "^2.0.23",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sharp": "^2.0.20",
+    "gatsby-plugin-typescript": "^2.0.8",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-sharp": "^2.1.13",
     "lodash.shuffle": "^4.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "typescript": "^3.3.3"
   },
   "keywords": [
     "gatsby"
@@ -26,19 +28,24 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "lint": "tslint --project .",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/18xx/union-station"
   },
   "devDependencies": {
-    "eslint": "^5.13.0",
-    "eslint-plugin-react": "^7.12.4"
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.1",
+    "prettier": "^1.16.4",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0"
   }
 }
