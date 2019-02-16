@@ -45,52 +45,29 @@ const minors: ReadonlyArray<string> = ['M24 - Swansea (D35)'].concat(
     'M21 - Merthyr Tydfil (E34)',
     'M22 - Exeter (D41)',
     'M23 - Plymouth (A42)',
-    'M25 - Norwich (Q30)',
-    'M26 - Hull (N21)',
-    'M27 - Glasgow (E6)',
-    'M28 - Carlisle (G12)',
-    'M29 - Mid Wales (F28)',
-    'M30 - Plymouth (B43)',
   ])
 );
 
-const privateBox1: ReadonlyArray<string> = ['P1 (permanent 5-train)'].concat(
+const privates: ReadonlyArray<string> = ['P1 (permanent 5-train)'].concat(
   shuffle([
+    'P2 (remove small station)',
     'P3 (permanent 2-train)',
     'P4 (permanent 2-train)',
-    'P13 (Pullman)',
-    'P14 (Pullman)',
-    'P19 (permanent L-train)',
-  ])
-);
-
-const privateBox2: ReadonlyArray<string> = shuffle(
-  ['P5 (token EC)'].concat(
-    shuffle([
-      'P2 (remove small station)',
-      'P8 (Hill/mountain)',
-      'P10 (estuary)',
-      'P11 (advanced track)',
-      'P12 (additional track)',
-      'P21 (Humber bridge)',
-    ]).slice(1)
-  )
-);
-
-const privateBox3: ReadonlyArray<string> = shuffle(
-  [
+    'P5 (token EC)',
     'P6 (mail contract)',
     'P7 (mail contract)',
+    'P8 (Hill/mountain)',
     'P9 (double cash SR order / treasury)',
-  ].concat(
-    shuffle([
-      'P15 (£10 / phase based payments)',
-      'P16 (tax haven)',
-      'P17 (adjust certificate order)',
-      'P18 (token exchange)',
-      'P20 (£5 / phase based payments)',
-    ]).slice(2)
-  )
+    'P10 (estuary)',
+    'P11 (advanced track)',
+    'P12 (additional track)',
+    'P13 (Pullman)',
+    'P14 (Pullman)',
+    'P15 (£10 / phase based payments)',
+    'P16 (tax haven)',
+    'P17 (adjust certificate order)',
+    'P18 (token exchange)',
+  ])
 );
 
 const IndexPage: React.SFC = () => (
@@ -99,9 +76,7 @@ const IndexPage: React.SFC = () => (
 
     <OrderedList heading='Concessions' list={concessions} />
     <OrderedList heading='Minors' list={minors} />
-    <OrderedList heading='Private Box 1' list={privateBox1} />
-    <OrderedList heading='Private Box 2' list={privateBox2} />
-    <OrderedList heading='Private Box 3' list={privateBox3} />
+    <OrderedList heading='Privates' list={privates} />
   </Layout>
 );
 
