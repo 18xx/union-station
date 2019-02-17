@@ -70,9 +70,9 @@ const privates: ReadonlyArray<string> = ['P1 (permanent 5-train)'].concat(
   ])
 );
 
-const IndexPage: React.SFC = () => (
+const Page: React.SFC = () => (
   <Layout>
-    <h1>1822+</h1>
+    <h1>1822 (Standard)</h1>
 
     <OrderedList heading='Concessions' list={concessions} />
     <OrderedList heading='Minors' list={minors} />
@@ -80,4 +80,4 @@ const IndexPage: React.SFC = () => (
   </Layout>
 );
 
-export default IndexPage;
+export default Page;
