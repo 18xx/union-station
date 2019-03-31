@@ -5,7 +5,7 @@ import OrderedList from '../../components/ordered_list';
 
 import sampleSize from 'lodash.samplesize';
 
-const privates: ReadonlyArray<string> = [
+const privates: readonly string[] = [
   'P1 - IRNC',
   'P2 - Mine',
   'P4 - Ferry',

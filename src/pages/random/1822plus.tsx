@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
 
-const concessions: ReadonlyArray<string> = [
+const concessions: readonly string[] = [
   'LNWR - London and North West Railway',
 ].concat(
   shuffle([
@@ -20,7 +20,7 @@ const concessions: ReadonlyArray<string> = [
   ])
 );
 
-const minors: ReadonlyArray<string> = ['M24 - Swansea (D35)'].concat(
+const minors: readonly string[] = ['M24 - Swansea (D35)'].concat(
   shuffle([
     'M1 - Aberdeen (H1)',
     'M2 - Highlands (E2-4)',
@@ -54,7 +54,7 @@ const minors: ReadonlyArray<string> = ['M24 - Swansea (D35)'].concat(
   ])
 );
 
-const privateBox1: ReadonlyArray<string> = ['P1 (permanent 5-train)'].concat(
+const privateBox1: readonly string[] = ['P1 (permanent 5-train)'].concat(
   shuffle([
     'P3 (permanent 2-train)',
     'P4 (permanent 2-train)',
@@ -64,7 +64,7 @@ const privateBox1: ReadonlyArray<string> = ['P1 (permanent 5-train)'].concat(
   ])
 );
 
-const privateBox2: ReadonlyArray<string> = shuffle(
+const privateBox2: readonly string[] = shuffle(
   ['P5 (token EC)'].concat(
     shuffle([
       'P2 (remove small station)',
@@ -77,7 +77,7 @@ const privateBox2: ReadonlyArray<string> = shuffle(
   )
 );
 
-const privateBox3: ReadonlyArray<string> = shuffle(
+const privateBox3: readonly string[] = shuffle(
   [
     'P6 (mail contract)',
     'P7 (mail contract)',

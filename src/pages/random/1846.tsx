@@ -11,7 +11,7 @@ const MAX_PLAYERS: number = 5;
 const Page: React.SFC = () => {
   const [numPlayers, setNumPlayers] = useState(5);
 
-  const companies: ReadonlyArray<string> = [
+  const companies: readonly string[] = [
     'B&O - Baltimore & Ohio',
     'GT - Grand Trunk',
     'IC - Illinois Central',
@@ -24,7 +24,7 @@ const Page: React.SFC = () => {
     ]).slice(MAX_PLAYERS - numPlayers)
   );
 
-  const privates: ReadonlyArray<string> = [
+  const privates: readonly string[] = [
     'Chicago & Western Indiana',
     'Mail Contract',
     'Big 4',

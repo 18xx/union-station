@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
 
-const companies: ReadonlyArray<string> = shuffle([
+const companies: readonly string[] = shuffle([
   "E&H - Ely & Huntingdon",
   "ECR - Eastern Counties Railway",
   "ENR - East Norfolk Railway",
@@ -27,7 +27,7 @@ const companies: ReadonlyArray<string> = shuffle([
   "WStI - Wisbech, St Ives & Cambridge Junction Rwy"
 ]).slice(4);
 
-const permits: ReadonlyArray<string> = shuffle([
+const permits: readonly string[] = shuffle([
   'Freight',
   'Freight',
   'Freight',
@@ -46,7 +46,7 @@ const permits: ReadonlyArray<string> = shuffle([
   'Local',
 ]);
 
-const pairs: ReadonlyArray<string> = companies.map((c, i) => (
+const pairs: readonly string[] = companies.map((c, i) => (
   `${c} (${permits[i]})`
 ));
 

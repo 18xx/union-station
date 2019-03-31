@@ -5,11 +5,11 @@ import Header from './header';
 import './layout.css';
 
 interface LayoutProps {
-  readonly children: ReadonlyArray<JSX.Element>;
+  readonly children: readonly JSX.Element[];
 }
 
 const renderFn: (
-  children: ReadonlyArray<JSX.Element>
+  children: readonly JSX.Element[]
 ) => (data: any) => JSX.Element = children => data => (
   <>
     <Header siteTitle={data.site.siteMetadata.title} />

@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
 
-const concessions: ReadonlyArray<string> = [
+const concessions: readonly string[] = [
   'LNWR - London and North West Railway',
 ].concat(
   shuffle([
@@ -20,7 +20,7 @@ const concessions: ReadonlyArray<string> = [
   ])
 );
 
-const minors: ReadonlyArray<string> = ['M24 - Swansea (D35)'].concat(
+const minors: readonly string[] = ['M24 - Swansea (D35)'].concat(
   shuffle([
     'M1 - Aberdeen (H1)',
     'M2 - Highlands (E2-4)',
@@ -48,7 +48,7 @@ const minors: ReadonlyArray<string> = ['M24 - Swansea (D35)'].concat(
   ])
 );
 
-const privates: ReadonlyArray<string> = ['P1 (permanent 5-train)'].concat(
+const privates: readonly string[] = ['P1 (permanent 5-train)'].concat(
   shuffle([
     'P2 (remove small station)',
     'P3 (permanent 2-train)',
