@@ -1,5 +1,6 @@
 import { graphql, StaticQuery } from 'gatsby';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Header from './header';
 import './layout.css';
@@ -12,6 +13,9 @@ const renderFn: (
   children: readonly JSX.Element[]
 ) => (data: any) => JSX.Element = children => data => (
   <>
+    <Helmet>
+      <title>{data.site.siteMetadata.title}</title>
+    </Helmet>
     <Header siteTitle={data.site.siteMetadata.title} />
     <div
       style={{
