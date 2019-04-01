@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-favicon`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
