@@ -615,3 +615,17 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.site-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  margin: 0 auto;
+  maxWidth: 960;
+  padding: 0px 1.0875rem 1.45rem`;
+  paddingTop: 0;
+}
