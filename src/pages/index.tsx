@@ -8,6 +8,7 @@ const IndexPage: React.SFC = () => (
     <h1>Game Randomizers</h1>
     <ul>
       <li><Link to="/random/1822/">1822</Link></li>
+      <li><Link to="/random/1822mrs/">1822 Medium Regional Scenario</Link></li>
       <li><Link to="/random/1822plus/">1822+</Link></li>
       <li><Link to="/random/1822ca/">1822CA</Link></li>
       <li><Link to="/random/1828/">1828</Link></li>
