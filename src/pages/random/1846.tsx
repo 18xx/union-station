@@ -1,15 +1,16 @@
-import range from 'lodash.range';
 import shuffle from 'lodash.shuffle';
 import React, { useState } from 'react';
 
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
+import PlayerSelector from '../../components/player_selector';
 
 const MIN_PLAYERS: number = 3;
 const MAX_PLAYERS: number = 5;
 
 const Page: React.SFC = () => {
   const [numPlayers, setNumPlayers] = useState(5);
+  const onClick: (n: number) => () => void = n => () => setNumPlayers(n);
 
   const companies: readonly string[] = [
     'B&O - Baltimore & Ohio',
@@ -43,24 +44,15 @@ const Page: React.SFC = () => {
       ]).slice(MAX_PLAYERS - numPlayers)
     );
 
-  const onClick: (n: number) => () => void = n => () => setNumPlayers(n);
-
-  const PlayerSelector: React.SFC = () => (
-    <>
-      {range(MIN_PLAYERS, MAX_PLAYERS + 1).map(n => (
-        <button key={n} onClick={onClick(n)}>
-          {n}
-        </button>
-      ))}
-    </>
-  );
-
   return (
     <Layout>
       <h1>1846</h1>
 
-      <p>Number of Players</p>
-      <PlayerSelector />
+      <PlayerSelector
+        minPlayers={MIN_PLAYERS}
+        maxPlayers={MAX_PLAYERS}
+        onClick={onClick}
+      />
       <br />
       <br />
 
