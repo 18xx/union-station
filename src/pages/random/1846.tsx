@@ -10,7 +10,6 @@ const MAX_PLAYERS: number = 5;
 
 const Page: React.SFC = () => {
   const [numPlayers, setNumPlayers] = useState(5);
-  const onClick: (n: number) => () => void = n => () => setNumPlayers(n);
 
   const companies: readonly string[] = [
     'B&O - Baltimore & Ohio',
@@ -49,12 +48,11 @@ const Page: React.SFC = () => {
       <h1>1846</h1>
 
       <PlayerSelector
+        initialValue={numPlayers}
         minPlayers={MIN_PLAYERS}
         maxPlayers={MAX_PLAYERS}
-        onClick={onClick}
+        setNumPlayers={setNumPlayers}
       />
-      <br />
-      <br />
 
       <OrderedList heading="Railroad Corporations" list={companies} />
       <OrderedList heading="Privates" list={privates} />

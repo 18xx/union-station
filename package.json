@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Gregor MacDougall <gmacdougall0@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "4.0.0-alpha.6",
     "gatsby": "^2.0.118",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-favicon": "^3.1.5",
@@ -18,10 +19,12 @@
     "lodash.range": "^3.2.0",
     "lodash.samplesize": "^4.2.0",
     "lodash.shuffle": "^4.2.0",
+    "mdi-material-ui": "^5.10.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
+    "typeface-roboto": "^0.0.54",
     "typescript": "^3.3.3"
   },
   "keywords": [

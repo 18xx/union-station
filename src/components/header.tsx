@@ -1,37 +1,49 @@
+import AppBar from '@material-ui/core/AppBar';
+import IconButton from '@material-ui/core/IconButton';
+import {
+  createStyles,
+  Theme,
+  withStyles,
+  WithStyles
+} from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { GithubCircle } from 'mdi-material-ui'
+
 import { Link } from 'gatsby';
 import React from 'react';
 
-interface HeaderProps {
+interface Props extends WithStyles<typeof styles> {
   readonly siteTitle: string;
 }
 
-const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-);
+const styles = (theme: Theme) => {
+  return createStyles({
+    grow: {
+      flexGrow: 1,
+    },
+    headerLink: {
+      color: theme.palette.primary.contrastText,
+      textDecoration: 'none',
+    }
+  });
+};
 
-export default Header;
+const Header: React.SFC<Props> = ({ classes, siteTitle }) => {
+  return <header>
+    <AppBar position="static">
+      <Toolbar>
+	<Typography variant="h6" color="inherit" className={classes.grow}>
+	  <Link to="/" className={classes.headerLink}>{siteTitle}</Link>
+	</Typography>
+	<a href='https://github.com/18xx/union-station' className={classes.headerLink}>
+	  <IconButton color='inherit'>
+	    <GithubCircle />
+	  </IconButton>
+	</a>
+      </Toolbar>
+    </AppBar>
+  </header>
+};
+
+export default withStyles(styles)(Header)

@@ -1,6 +1,8 @@
-import range from 'lodash.range';
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
+
 import sampleSize from 'lodash.samplesize';
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
@@ -8,17 +10,12 @@ import OrderedList from '../../components/ordered_list';
 const Page: React.SFC = () => {
   const [scenario, setScenario] = useState(5);
 
-  const onClick: (n: number) => () => void = n => () => setScenario(n);
-
-  const ScenarioSelector: React.SFC = () => (
-    <>
-      {range(5, 7).map(n => (
-        <button key={n} onClick={onClick(n)}>
-          {n}
-        </button>
-      ))}
-    </>
-  );
+  const onChange: (
+    event: ChangeEvent<{}>,
+    value: number
+  ) => void = (_, value) => {
+    setScenario(value);
+  };
 
   const companies: readonly string[] = sampleSize([
     "AFG - Azienda Ferroviaria Garibaldi",
@@ -31,13 +28,11 @@ const Page: React.SFC = () => {
 
   return <Layout>
     <h1>1849</h1>
-    <p>
-      <h3>Choose Scenario</h3>
-      <ScenarioSelector />
-    </p>
-    <br />
 
-    <h2>Scenario {scenario}</h2>
+    <Tabs value={scenario} onChange={onChange}>
+      <Tab value={5} label="Scenario 5" />
+      <Tab value={6} label="Scenario 6" />
+    </Tabs>
 
     <OrderedList heading='Companies' list={companies} />
   </Layout>

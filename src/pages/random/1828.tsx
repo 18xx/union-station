@@ -10,7 +10,6 @@ const MAX_PLAYERS: number = 5;
 
 const Page: React.SFC = () => {
   const [numPlayers, setNumPlayers] = useState(MAX_PLAYERS);
-  const onClick: (n: number) => () => void = n => () => setNumPlayers(n);
 
   const companies: readonly string[] = sampleSize([
     'Canadian Pacific',
@@ -28,12 +27,11 @@ const Page: React.SFC = () => {
       <h1>1828</h1>
 
       <PlayerSelector
+        initialValue={numPlayers}
         minPlayers={MIN_PLAYERS}
         maxPlayers={MAX_PLAYERS}
-        onClick={onClick}
+        setNumPlayers={setNumPlayers}
       />
-      <br />
-      <br />
 
       <h3>{numPlayers} Players</h3>
       <OrderedList heading="$250 Privates" list={companies} />

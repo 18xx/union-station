@@ -1,6 +1,9 @@
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
+
 import range from 'lodash.range';
 import shuffle from 'lodash.shuffle';
-import React, { useState } from 'react';
+import React, { ChangeEvent, SFC, useState } from 'react';
 
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
@@ -10,13 +13,13 @@ interface Company {
   readonly name: string;
 }
 
-const MODE_PRIVATES: any = {
-  advanced: range(1, 13),
+const MODE_PRIVATES: Record<string, readonly number[]> = {
+  advanced: [1, 2].concat(range(5, 15)),
   standard: [1, 18].concat(range(4, 17)),
-  starter: [1, 2].concat(range(5, 15)),
-}
+  starter: range(1, 13),
+};
 
-const Page: React.SFC = () => {
+const Page: SFC = () => {
   const [mode, setMode] = useState('standard');
 
   const concessions: readonly string[] = [
@@ -85,24 +88,31 @@ const Page: React.SFC = () => {
     privateCompanies.filter(c => privatesInPlay.includes(c.num))
   )).map(({num, name}) => `P${num} - ${name}`);
 
-  const onClick: (m: string) => () => void = m => () => setMode(m);
+  const onChange: (
+    event: ChangeEvent<{}>,
+    value: string
+  ) => void = (_, value) => {
+    setMode(value);
+  };
 
   return <Layout>
-    <h1>1822 (Medium Regional Scenario)</h1>
+    <div style={{ position: "relative" }}>
+      <h1>1822 (Medium Regional Scenario)</h1>
 
-    <p>
-      <button onClick={onClick('starter')}>Starter</button>
-      <button onClick={onClick('standard')}>Standard</button>
-      <button onClick={onClick('advanced')}>Advanced</button>
-    </p>
+      <Tabs value={mode} onChange={onChange}>
+        <Tab value='starter' label="Starter" />
+        <Tab value='standard' label="Standard" />
+        <Tab value='advanced' label="Advanced" />
+      </Tabs>
 
-    <h2>Selected Version: {mode}</h2>
-
-    <OrderedList heading='Concessions' list={concessions} />
-    <OrderedList heading='Minors' list={minors} />
-    <OrderedList heading='Privates' list={privates} />
+      <div>
+        <OrderedList heading='Concessions' list={concessions} />
+        <OrderedList heading='Minors' list={minors} />
+        <OrderedList heading='Privates' list={privates} />
+      </div>
+    </div>
+    <div />
   </Layout>
 };
 
 export default Page;
-
