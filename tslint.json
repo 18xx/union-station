@@ -24,6 +24,6 @@
     "no-object-mutation": true,
     "no-delete": true,
     "no-method-signature": true,
-    "no-submodule-imports": [true, "@material-ui/core"]
+    "no-submodule-imports": [true, "@material-ui/core", "@material-ui/icons"]
   }
 }

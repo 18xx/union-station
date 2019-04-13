@@ -29,8 +29,8 @@ const styles: any = () => {
 const renderFn: (
   children: readonly JSX.Element[],
   classes: typeof styles
-) => (data: any) => JSX.Element = (children, classes) => data => (
-  <>
+) => (data: any) => JSX.Element = (children, classes) => data => {
+  return <>
     <Helmet>
       <title>{data.site.siteMetadata.title}</title>
       <meta
@@ -47,10 +47,10 @@ const renderFn: (
       <main className={classes.body}>{children}</main>
     </Typography>
   </>
-);
+};
 
-const Layout: React.SFC<LayoutProps> = ({ children, classes }) => (
-  <StaticQuery
+const Layout: React.SFC<LayoutProps> = ({ children, classes }) => {
+  return <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
@@ -62,6 +62,6 @@ const Layout: React.SFC<LayoutProps> = ({ children, classes }) => (
     `}
     render={renderFn(children, classes)}
   />
-);
+};
 
 export default withStyles(styles)(Layout);
