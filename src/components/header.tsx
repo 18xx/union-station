@@ -40,14 +40,14 @@ const Header: SFC<Props> = ({ classes, siteTitle }) => {
   return <header>
     <AppBar position="static">
       <Toolbar>
-	<IconButton color='inherit' onClick={toggle}>
+	<IconButton color='inherit' onClick={toggle} aria-label="Menu">
 	  <MenuIcon />
 	</IconButton>
 	<Typography variant="h6" color="inherit" className={classes.grow}>
 	  {siteTitle}
 	</Typography>
 	<a href='https://github.com/18xx/union-station' className={classes.headerLink}>
-	  <IconButton color='inherit'>
+	  <IconButton color='inherit' aria-label="GitHub Source">
 	    <GithubCircle />
 	  </IconButton>
 	</a>
