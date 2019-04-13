@@ -4491,6 +4491,12 @@ gatsby-plugin-favicon@^3.1.5:
     html-react-parser "^0.6.4"
     lodash "^4.17.11"
 
+gatsby-plugin-html-attributes@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-html-attributes/-/gatsby-plugin-html-attributes-1.0.5.tgz#811613bdeff119aa4fa61ed33b5147d52d5a7017"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-manifest@^2.0.17:
   version "2.0.29"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.29.tgz#ce83b0ef1aa2d74b9027c3bdb26be2fbd25ef1bc"

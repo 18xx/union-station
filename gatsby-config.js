@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Union Station',
-    description: 'Helpers for 18xx Games',
+    description: 'A set of tools to assist in playing 18xx board games',
     author: 'Gregor MacDougall'
   },
   plugins: [
@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en',
+      },
+    },
     `gatsby-plugin-favicon`,
     {
       resolve: `gatsby-plugin-manifest`,

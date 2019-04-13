@@ -40,6 +40,8 @@ const renderFn: (
           width=device-width,
           shrink-to-fit=no"
         />
+      <meta name="Description"
+        content={data.site.siteMetadata.description} />
     </Helmet>
     <CssBaseline />
     <Typography component="div">
@@ -56,6 +58,7 @@ const Layout: React.SFC<LayoutProps> = ({ children, classes }) => {
         site {
           siteMetadata {
             title
+            description
           }
         }
       }
