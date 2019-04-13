@@ -1,12 +1,15 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import LeftMenu from '../components/left_menu';
 
 const IndexPage: React.SFC = () => (
   <Layout>
-    <div />
-    <LeftMenu />
+    <h2>Welcome to 18xx.online!</h2>
+    <p>
+      Currently providing 18xx randomizers, potentially providing more in the
+      future.
+    </p>
+    <p>Get started by clicking the menu icon in the top left.</p>
   </Layout>
 );
 
