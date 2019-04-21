@@ -1,0 +1,29 @@
+import Layout from '../../components/layout';
+
+import shuffle from 'lodash.shuffle';
+import React from 'react';
+
+const Page: React.SFC = () => {
+  const companies: readonly string[] = shuffle([
+    "B&O - Baltimore & Ohio",
+    "C&A - Camden & Amboy",
+    "C&O - Chesapeake & Ohio",
+    "LV - Lehigh Valley",
+    "N&W - Norfolk & Western",
+    "PRR - Pensylvania Railroad",
+    "PLE - Pittsburgh and Lake Erie",
+    "SRC - Strasburg",
+  ]);
+
+  return <Layout>
+    <h1>18Chesapeake</h1>
+
+    <dl>
+      <dt>P6 Associated with Presidency of:</dt>
+      <dd>{companies[0]}</dd>
+    </dl>
+  </Layout>
+}
+
+export default Page;
+

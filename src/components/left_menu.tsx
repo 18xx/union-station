@@ -17,6 +17,7 @@ const games: Record<string, string> = {
   '1846': '1846',
   '1849': '1849',
   '1862ea': '1862EA',
+  '18ches': '18Chesapeake',
   '18ireland': '18Ireland',
   '18nw': '18NW',
 }
