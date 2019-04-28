@@ -96,22 +96,19 @@ const Page: SFC = () => {
   };
 
   return <Layout>
-    <div style={{ position: "relative" }}>
-      <h1>1822 (Medium Regional Scenario)</h1>
+    <h1>1822 (Medium Regional Scenario)</h1>
 
-      <Tabs value={mode} onChange={onChange}>
-        <Tab value='starter' label="Starter" />
-        <Tab value='standard' label="Standard" />
-        <Tab value='advanced' label="Advanced" />
-      </Tabs>
+    <Tabs value={mode} onChange={onChange}>
+      <Tab value='starter' label="Starter" />
+      <Tab value='standard' label="Standard" />
+      <Tab value='advanced' label="Advanced" />
+    </Tabs>
 
-      <div>
-        <OrderedList heading='Concessions' list={concessions} />
-        <OrderedList heading='Minors' list={minors} />
-        <OrderedList heading='Privates' list={privates} />
-      </div>
+    <div>
+      <OrderedList heading='Concessions' list={concessions} />
+      <OrderedList heading='Minors' list={minors} />
+      <OrderedList heading='Privates' list={privates} />
     </div>
-    <div />
   </Layout>
 };
 
