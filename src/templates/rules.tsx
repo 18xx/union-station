@@ -1,11 +1,6 @@
 import library from '18xx-library';
 import React from 'react';
 
-import {
-  createStyles,
-  withStyles,
-  WithStyles
-} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -18,20 +13,9 @@ interface PageContext {
   readonly game: Game;
 }
 
-interface Props extends WithStyles<typeof styles> {
+interface Props {
   readonly pageContext: PageContext;
 }
-
-const styles = () => {
-  return createStyles({
-    definition: {
-      marginBottom: '1em',
-    },
-    term: {
-      fontWeight: 'bold',
-    },
-  });
-};
 
 const render: (
   input: boolean | string | readonly object[]
@@ -65,7 +49,7 @@ const render: (
   </Table>
 };
 
-const Page: React.SFC<Props> = ({ classes, pageContext }) => {
+const Page: React.SFC<Props> = ({ pageContext }) => {
   const game = library.find(pageContext.game.name);
   if (!game) {
     return <p>Not Found</p>;
@@ -76,8 +60,8 @@ const Page: React.SFC<Props> = ({ classes, pageContext }) => {
       <h1>{game.name}</h1>
       <dl>
       {Object.entries(game.rules()).map(pair => {
-        return <div key={pair[0]} className={classes.definition}>
-          <dt className={classes.term}>{pair[0]}</dt>
+        return <div key={pair[0]} style={{ marginBottom: '1em' }}>
+          <dt style={{ fontWeight: 'bold' }}>{pair[0]}</dt>
           <dd>{render(pair[1])}</dd>
         </div>;
       })}
@@ -86,4 +70,4 @@ const Page: React.SFC<Props> = ({ classes, pageContext }) => {
   );
 };
 
-export default withStyles(styles)(Page)
+export default Page;
