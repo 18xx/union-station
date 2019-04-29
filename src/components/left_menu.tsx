@@ -1,14 +1,15 @@
+import library from '18xx-library';
 import Collapse from '@material-ui/core/Collapse';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { DiceMultiple, Home } from 'mdi-material-ui'
+import { DiceMultiple, FormatListBulleted, Home } from 'mdi-material-ui'
 import React, { SFC, useState } from 'react';
 
 import ListItemLink from './list_item_link';
 
-const games: Record<string, string> = {
+const randomGames: Record<string, string> = {
   '1822': '1822',
   '1822ca': '1822 CA',
   '1822mrs': '1822 MRS',
@@ -23,9 +24,15 @@ const games: Record<string, string> = {
 }
 
 const LeftMenu: SFC = () => {
-  const [openRandomizers, setOpenRandomizers] = useState(true);
+  const [openRandomizers, setOpenRandomizers] = useState(false);
+  const [openRulesDiff, setOpenRulesDiff] = useState(false);
+
   const randomizersOnClick: () => void = () => {
     setOpenRandomizers(!openRandomizers);
+  };
+
+  const rulesDiffOnClick: () => void = () => {
+    setOpenRulesDiff(!openRulesDiff);
   };
 
   return <>
@@ -40,13 +47,30 @@ const LeftMenu: SFC = () => {
       </ListItem>
       <Collapse in={openRandomizers} timeout="auto" unmountOnExit={true}>
         <List>
-          {Object.entries(games).sort(
+          {Object.entries(randomGames).sort(
             (a, b) => a[0].localeCompare(b[0])
           ).map(
           g => <ListItemLink
             to={`/random/${g[0]}/`}
             primary={g[1]}
             key={g[0]} />
+          )}
+        </List>
+      </Collapse>
+
+      <ListItem button={true} onClick={rulesDiffOnClick}>
+        <ListItemIcon>
+          <FormatListBulleted />
+        </ListItemIcon>
+        <ListItemText primary="Rules Differences" />
+      </ListItem>
+      <Collapse in={openRulesDiff} timeout="auto" unmountOnExit={true}>
+        <List>
+          {library.all().map(
+            game => <ListItemLink
+              to={`/rules/${game.name}`}
+              primary={game.name}
+              key={game.name} />
           )}
         </List>
       </Collapse>
