@@ -68,7 +68,7 @@ const LeftMenu: SFC = () => {
         <List>
           {library.all().map(
             game => <ListItemLink
-              to={`/rules/${game.name}`}
+              to={`/rules/${game.name}/`}
               primary={game.name}
               key={game.name} />
           )}
