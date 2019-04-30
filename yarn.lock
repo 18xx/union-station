@@ -3,8 +3,8 @@
 
 
 "18xx-library@^0.1.2":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/18xx-library/-/18xx-library-0.1.4.tgz#4a92760025e705f9ed4d25c674145a8e13c001b6"
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/18xx-library/-/18xx-library-0.1.6.tgz#1f16eb333788158c2c37fe97d2ba112cd2917760"
 
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
