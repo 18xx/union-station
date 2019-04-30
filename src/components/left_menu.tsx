@@ -67,10 +67,15 @@ const LeftMenu: SFC = () => {
       <Collapse in={openRulesDiff} timeout="auto" unmountOnExit={true}>
         <List>
           {library.all().map(
-            game => <ListItemLink
-              to={`/rules/${game.name}/`}
-              primary={game.name}
-              key={game.name} />
+            game => {
+              const link = game.name === '18??' ?
+                '/rules/18-question-marks/' : `/rules/${game.name}/`;
+
+              return <ListItemLink
+                to={link}
+                primary={game.name}
+                key={game.name} />
+            }
           )}
         </List>
       </Collapse>
