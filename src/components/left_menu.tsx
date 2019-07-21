@@ -13,6 +13,7 @@ const randomGames: Record<string, string> = {
   '1822': '1822',
   '1822ca': '1822 CA',
   '1822mrs': '1822 MRS',
+  '1822mx': '1822 MX',
   '1822plus': '1822+',
   '1828': '1828',
   '1846': '1846',
