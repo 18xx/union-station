@@ -21,6 +21,7 @@ const randomGames: Record<string, string> = {
   '1862ea': '1862EA',
   '18ches': '18Chesapeake',
   '18ireland': '18Ireland',
+  '18newengland': '18NewEngland',
   '18nw': '18NW',
 }
 
