@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"18xx-library@^0.1.2":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/18xx-library/-/18xx-library-0.1.7.tgz#41d8f1c66d37f007255bebc033d7d3f2427ba20b"
-
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"

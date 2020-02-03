@@ -1,10 +1,9 @@
-import library from '18xx-library';
 import Collapse from '@material-ui/core/Collapse';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { DiceMultiple, FormatListBulleted, Home } from 'mdi-material-ui'
+import { DiceMultiple, Home } from 'mdi-material-ui'
 import React, { SFC, useState } from 'react';
 
 import ListItemLink from './list_item_link';
@@ -27,14 +26,9 @@ const randomGames: Record<string, string> = {
 
 const LeftMenu: SFC = () => {
   const [openRandomizers, setOpenRandomizers] = useState(false);
-  const [openRulesDiff, setOpenRulesDiff] = useState(false);
 
   const randomizersOnClick: () => void = () => {
     setOpenRandomizers(!openRandomizers);
-  };
-
-  const rulesDiffOnClick: () => void = () => {
-    setOpenRulesDiff(!openRulesDiff);
   };
 
   return <>
@@ -56,28 +50,6 @@ const LeftMenu: SFC = () => {
             to={`/random/${g[0]}/`}
             primary={g[1]}
             key={g[0]} />
-          )}
-        </List>
-      </Collapse>
-
-      <ListItem button={true} onClick={rulesDiffOnClick}>
-        <ListItemIcon>
-          <FormatListBulleted />
-        </ListItemIcon>
-        <ListItemText primary="Rules Differences" />
-      </ListItem>
-      <Collapse in={openRulesDiff} timeout="auto" unmountOnExit={true}>
-        <List>
-          {library.all().map(
-            game => {
-              const link = game.name === '18??' ?
-                '/rules/18-question-marks/' : `/rules/${game.name}/`;
-
-              return <ListItemLink
-                to={link}
-                primary={game.name}
-                key={game.name} />
-            }
           )}
         </List>
       </Collapse>

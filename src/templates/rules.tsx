@@ -1,4 +1,3 @@
-import library from '18xx-library';
 import React from 'react';
 
 import Table from '@material-ui/core/Table';
