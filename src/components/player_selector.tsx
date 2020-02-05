@@ -15,21 +15,23 @@ const PlayerSelector: React.SFC<Props> = ({
   initialValue,
   minPlayers,
   maxPlayers,
-  setNumPlayers
+  setNumPlayers,
 }) => {
-  const onChange: (
-    event: ChangeEvent<{}>,
-    value: number
-  ) => void = (_, value) => {
+  const onChange: (event: ChangeEvent<{}>, value: number) => void = (
+    _,
+    value
+  ) => {
     setNumPlayers(value);
   };
 
-  return <>
-    <Tabs value={initialValue} onChange={onChange}>
-      {range(minPlayers, maxPlayers + 1).map(n => (
-        <Tab key={n} value={n} label={`${n} Player`} />
-      ))}
-    </Tabs>
-  </>;
+  return (
+    <>
+      <Tabs value={initialValue} onChange={onChange}>
+        {range(minPlayers, maxPlayers + 1).map(n => (
+          <Tab key={n} value={n} label={`${n} Player`} />
+        ))}
+      </Tabs>
+    </>
+  );
 };
 export default PlayerSelector;

@@ -9,7 +9,9 @@ const OrderedList: React.SFC<OrderedListProps> = ({ heading, list }) => (
   <>
     <h3>{heading}</h3>
     <ol>
-      {list.map((str, idx) => <li key={idx}>{str}</li>)}
+      {list.map((str, idx) => (
+        <li key={idx}>{str}</li>
+      ))}
     </ol>
   </>
 );

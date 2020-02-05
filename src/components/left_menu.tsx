@@ -31,30 +31,33 @@ const LeftMenu: SFC = () => {
     setOpenRandomizers(!openRandomizers);
   };
 
-  return <>
-    <List>
-      <ListItemLink primary="Home" to="/" icon={<Home />} />
+  return (
+    <>
+      <List>
+        <ListItemLink primary="Home" to="/" icon={<Home />} />
 
-      <ListItem button={true} onClick={randomizersOnClick}>
-        <ListItemIcon>
-          <DiceMultiple />
-        </ListItemIcon>
-        <ListItemText primary="Game Randomizers" />
-      </ListItem>
-      <Collapse in={openRandomizers} timeout="auto" unmountOnExit={true}>
-        <List>
-          {Object.entries(randomGames).sort(
-            (a, b) => a[0].localeCompare(b[0])
-          ).map(
-            g => <ListItemLink
-              to={`/random/${g[0]}/`}
-              primary={g[1]}
-              key={g[0]} />
-          )}
-        </List>
-      </Collapse>
-    </List>
-  </>;
+        <ListItem button={true} onClick={randomizersOnClick}>
+          <ListItemIcon>
+            <DiceMultiple />
+          </ListItemIcon>
+          <ListItemText primary="Game Randomizers" />
+        </ListItem>
+        <Collapse in={openRandomizers} timeout="auto" unmountOnExit={true}>
+          <List>
+            {Object.entries(randomGames)
+              .sort((a, b) => a[0].localeCompare(b[0]))
+              .map(g => (
+                <ListItemLink
+                  to={`/random/${g[0]}/`}
+                  primary={g[1]}
+                  key={g[0]}
+                />
+              ))}
+          </List>
+        </Collapse>
+      </List>
+    </>
+  );
 };
 
 export default LeftMenu;

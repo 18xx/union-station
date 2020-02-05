@@ -11,21 +11,22 @@ const Page: React.SFC = () => {
     'P2 - Mine',
     'P4 - Ferry',
     'P6 - Oil',
-  ].concat(sampleSize([
-    'P3a - Timber',
-    'P3b - Steamboat',
-    'P3c - Steamship',
-  ], 1), sampleSize([
-    'P5a - Port',
-    'P5b - Shovel',
-    'P5c - Tunnel',
-  ], 1), sampleSize([
-    'P7a - Kettle Valley',
-    'P7b - Camas Prairie',
-    'P7c - Kaslo & Slocan',
-    'P7d - Tacoma & Eastern',
-    'P7e - Oregon Short Line',
-  ], 3)).sort();
+  ]
+    .concat(
+      sampleSize(['P3a - Timber', 'P3b - Steamboat', 'P3c - Steamship'], 1),
+      sampleSize(['P5a - Port', 'P5b - Shovel', 'P5c - Tunnel'], 1),
+      sampleSize(
+        [
+          'P7a - Kettle Valley',
+          'P7b - Camas Prairie',
+          'P7c - Kaslo & Slocan',
+          'P7d - Tacoma & Eastern',
+          'P7e - Oregon Short Line',
+        ],
+        3
+      )
+    )
+    .sort();
 
   return (
     <Layout>

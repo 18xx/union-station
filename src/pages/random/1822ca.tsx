@@ -89,13 +89,15 @@ const Page: React.SFC = () => {
     ])
   );
 
-  return <Layout>
-    <h1>1822 CA</h1>
+  return (
+    <Layout>
+      <h1>1822 CA</h1>
 
-    <OrderedList heading="Concessions" list={concessions} />
-    <OrderedList heading="Minors" list={minors} />
-    <OrderedList heading="Privates" list={privates} />
-  </Layout>;
+      <OrderedList heading="Concessions" list={concessions} />
+      <OrderedList heading="Minors" list={minors} />
+      <OrderedList heading="Privates" list={privates} />
+    </Layout>
+  );
 };
 
 export default Page;

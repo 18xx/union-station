@@ -6,7 +6,7 @@ import {
   StyleRules,
   Theme,
   withStyles,
-  WithStyles
+  WithStyles,
 } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -20,15 +20,16 @@ interface Props extends WithStyles<typeof styles> {
   readonly siteTitle: string;
 }
 
-const styles: (theme: Theme) => StyleRules = theme => createStyles({
-  grow: {
-    flexGrow: 1,
-  },
-  headerLink: {
-    color: theme.palette.primary.contrastText,
-    textDecoration: 'none',
-  }
-});
+const styles: (theme: Theme) => StyleRules = theme =>
+  createStyles({
+    grow: {
+      flexGrow: 1,
+    },
+    headerLink: {
+      color: theme.palette.primary.contrastText,
+      textDecoration: 'none',
+    },
+  });
 
 const Header: SFC<Props> = ({ classes, siteTitle }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,26 +37,31 @@ const Header: SFC<Props> = ({ classes, siteTitle }) => {
   const onClose: () => void = () => setMenuOpen(false);
   const toggle: () => void = () => setMenuOpen(!menuOpen);
 
-  return <header>
-    <AppBar position="static">
-      <Toolbar>
-        <IconButton color='inherit' onClick={toggle} aria-label="Menu">
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" color="inherit" className={classes.grow}>
-          {siteTitle}
-        </Typography>
-        <a href='https://github.com/18xx/union-station' className={classes.headerLink}>
-          <IconButton color='inherit' aria-label="GitHub Source">
-            <GithubCircle />
+  return (
+    <header>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton color="inherit" onClick={toggle} aria-label="Menu">
+            <MenuIcon />
           </IconButton>
-        </a>
-      </Toolbar>
-    </AppBar>
-    <Drawer open={menuOpen} onClose={onClose}>
-      <LeftMenu />
-    </Drawer>
-  </header>;
+          <Typography variant="h6" color="inherit" className={classes.grow}>
+            {siteTitle}
+          </Typography>
+          <a
+            href="https://github.com/18xx/union-station"
+            className={classes.headerLink}
+          >
+            <IconButton color="inherit" aria-label="GitHub Source">
+              <GithubCircle />
+            </IconButton>
+          </a>
+        </Toolbar>
+      </AppBar>
+      <Drawer open={menuOpen} onClose={onClose}>
+        <LeftMenu />
+      </Drawer>
+    </header>
+  );
 };
 
 export default withStyles(styles)(Header);

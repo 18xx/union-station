@@ -94,15 +94,17 @@ const Page: React.SFC = () => {
     )
   );
 
-  return <Layout>
-    <h1>1822+</h1>
+  return (
+    <Layout>
+      <h1>1822+</h1>
 
-    <OrderedList heading='Concessions' list={concessions} />
-    <OrderedList heading='Minors' list={minors} />
-    <OrderedList heading='Private Box 1' list={privateBox1} />
-    <OrderedList heading='Private Box 2' list={privateBox2} />
-    <OrderedList heading='Private Box 3' list={privateBox3} />
-  </Layout>;
+      <OrderedList heading="Concessions" list={concessions} />
+      <OrderedList heading="Minors" list={minors} />
+      <OrderedList heading="Private Box 1" list={privateBox1} />
+      <OrderedList heading="Private Box 2" list={privateBox2} />
+      <OrderedList heading="Private Box 3" list={privateBox3} />
+    </Layout>
+  );
 };
 
 export default Page;

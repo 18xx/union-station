@@ -56,10 +56,10 @@ const Page: SFC = () => {
     { num: 24, name: 'Swansea (D35)' },
   ];
 
-  const minors: readonly string[] =
-    minorCompanies.filter(c => c.num=== startMinor).concat(
-      shuffle(minorCompanies.filter(c => c.num!== startMinor))
-    ).map(({num, name}) => `M${num} - ${name}`);
+  const minors: readonly string[] = minorCompanies
+    .filter(c => c.num === startMinor)
+    .concat(shuffle(minorCompanies.filter(c => c.num !== startMinor)))
+    .map(({ num, name }) => `M${num} - ${name}`);
 
   const starterPrivate: Company = { num: 1, name: 'permanent 5-train' };
   const privateCompanies: readonly Company[] = [
@@ -84,32 +84,36 @@ const Page: SFC = () => {
 
   const privatesInPlay: readonly number[] = MODE_PRIVATES[mode];
 
-  const privates: readonly string[] = [starterPrivate].concat(shuffle(
-    privateCompanies.filter(c => privatesInPlay.includes(c.num))
-  )).map(({num, name}) => `P${num} - ${name}`);
+  const privates: readonly string[] = [starterPrivate]
+    .concat(
+      shuffle(privateCompanies.filter(c => privatesInPlay.includes(c.num)))
+    )
+    .map(({ num, name }) => `P${num} - ${name}`);
 
-  const onChange: (
-    event: ChangeEvent<{}>,
-    value: string
-  ) => void = (_, value) => {
+  const onChange: (event: ChangeEvent<{}>, value: string) => void = (
+    _,
+    value
+  ) => {
     setMode(value);
   };
 
-  return <Layout>
-    <h1>1822 (Medium Regional Scenario)</h1>
+  return (
+    <Layout>
+      <h1>1822 (Medium Regional Scenario)</h1>
 
-    <Tabs value={mode} onChange={onChange}>
-      <Tab value='starter' label="Starter" />
-      <Tab value='standard' label="Standard" />
-      <Tab value='advanced' label="Advanced" />
-    </Tabs>
+      <Tabs value={mode} onChange={onChange}>
+        <Tab value="starter" label="Starter" />
+        <Tab value="standard" label="Standard" />
+        <Tab value="advanced" label="Advanced" />
+      </Tabs>
 
-    <div>
-      <OrderedList heading='Concessions' list={concessions} />
-      <OrderedList heading='Minors' list={minors} />
-      <OrderedList heading='Privates' list={privates} />
-    </div>
-  </Layout>;
+      <div>
+        <OrderedList heading="Concessions" list={concessions} />
+        <OrderedList heading="Minors" list={minors} />
+        <OrderedList heading="Privates" list={privates} />
+      </div>
+    </Layout>
+  );
 };
 
 export default Page;

@@ -11,16 +11,19 @@ const MAX_PLAYERS = 5;
 const Page: React.SFC = () => {
   const [numPlayers, setNumPlayers] = useState(MAX_PLAYERS);
 
-  const companies: readonly string[] = sampleSize([
-    'Canadian Pacific',
-    'Grand Trunk',
-    'Illinois Central',
-    'Michigan Central',
-    'Missouri Pacific Railroad',
-    'New York, Chicago & St. Louis Railroad',
-    'Norfolk & Western',
-    'Ontario, Simcoe & Huron',
-  ], numPlayers + 1);
+  const companies: readonly string[] = sampleSize(
+    [
+      'Canadian Pacific',
+      'Grand Trunk',
+      'Illinois Central',
+      'Michigan Central',
+      'Missouri Pacific Railroad',
+      'New York, Chicago & St. Louis Railroad',
+      'Norfolk & Western',
+      'Ontario, Simcoe & Huron',
+    ],
+    numPlayers + 1
+  );
 
   return (
     <Layout>
