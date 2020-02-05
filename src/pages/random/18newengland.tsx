@@ -22,14 +22,12 @@ const companies: readonly string[] = shuffle([
   'WNR - Worcester, Nashua and Rochester Railroad',
 ]);
 
-const Page: React.SFC = () => {
-  return <Layout>
-    <h1>18NewEngland</h1>
+const Page: React.SFC = () => <Layout>
+  <h1>18NewEngland</h1>
 
-    <OrderedList heading='Start' list={companies.slice(0, 10)} />
-    <OrderedList heading='Phase 3' list={companies.slice(10, 15)} />
+  <OrderedList heading='Start' list={companies.slice(0, 10)} />
+  <OrderedList heading='Phase 3' list={companies.slice(10, 15)} />
 
-  </Layout>
-};
+</Layout>;
 
 export default Page;

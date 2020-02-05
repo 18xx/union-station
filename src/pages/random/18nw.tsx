@@ -29,11 +29,11 @@ const Page: React.SFC = () => {
 
   return (
     <Layout>
-      <h1>18NW: Railroading in the "Great Northwest"</h1>
+      <h1>18NW: Railroading in the Great Northwest</h1>
 
       <OrderedList heading="Private Companies" list={privates} />
     </Layout>
   );
-}
+};
 
 export default Page;

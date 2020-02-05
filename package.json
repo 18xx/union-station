@@ -36,7 +36,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "lint": "eslint \"src/**\"",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx",
+    "lint:fix": "yarn lint --fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",

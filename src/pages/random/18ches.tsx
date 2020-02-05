@@ -22,8 +22,8 @@ const Page: React.SFC = () => {
       <dt>P6 Associated with Presidency of:</dt>
       <dd>{companies[0]}</dd>
     </dl>
-  </Layout>
-}
+  </Layout>;
+};
 
 export default Page;
 

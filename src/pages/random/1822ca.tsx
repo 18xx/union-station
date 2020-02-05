@@ -95,7 +95,7 @@ const Page: React.SFC = () => {
     <OrderedList heading="Concessions" list={concessions} />
     <OrderedList heading="Minors" list={minors} />
     <OrderedList heading="Privates" list={privates} />
-  </Layout>
+  </Layout>;
 };
 
 export default Page;

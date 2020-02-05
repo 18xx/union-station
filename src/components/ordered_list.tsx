@@ -14,4 +14,4 @@ const OrderedList: React.SFC<OrderedListProps> = ({ heading, list }) => (
   </>
 );
 
-export default OrderedList
+export default OrderedList;

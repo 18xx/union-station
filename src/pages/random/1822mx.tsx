@@ -81,7 +81,7 @@ const Page: React.SFC = () => {
       Remaining minor in pool as an NdeM share.
     </p>
     <OrderedList heading='Privates' list={privates} />
-  </Layout>
+  </Layout>;
 };
 
 export default Page;

@@ -109,7 +109,7 @@ const Page: SFC = () => {
       <OrderedList heading='Minors' list={minors} />
       <OrderedList heading='Privates' list={privates} />
     </div>
-  </Layout>
+  </Layout>;
 };
 
 export default Page;

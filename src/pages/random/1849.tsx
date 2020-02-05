@@ -35,7 +35,7 @@ const Page: React.SFC = () => {
     </Tabs>
 
     <OrderedList heading='Companies' list={companies} />
-  </Layout>
-}
+  </Layout>;
+};
 
 export default Page;

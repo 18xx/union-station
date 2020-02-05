@@ -11,13 +11,11 @@ interface Props {
   readonly to: string;
 }
 
-const ListItemLink: SFC<Props> = ({ icon, primary, to }) => {
-  return (
-    <ListItem button={true} component={Link} to={to}>
-      {icon && <ListItemIcon>{icon}</ListItemIcon>}
-      <ListItemText inset={true} primary={primary} />
-    </ListItem>
-  );
-};
+const ListItemLink: SFC<Props> = ({ icon, primary, to }) => (
+  <ListItem button={true} component={Link} to={to}>
+    {icon && <ListItemIcon>{icon}</ListItemIcon>}
+    <ListItemText inset={true} primary={primary} />
+  </ListItem>
+);
 
 export default ListItemLink;

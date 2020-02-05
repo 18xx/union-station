@@ -3,7 +3,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { DiceMultiple, Home } from 'mdi-material-ui'
+import { DiceMultiple, Home } from 'mdi-material-ui';
 import React, { SFC, useState } from 'react';
 
 import ListItemLink from './list_item_link';
@@ -22,7 +22,7 @@ const randomGames: Record<string, string> = {
   '18ireland': '18Ireland',
   '18newengland': '18NewEngland',
   '18nw': '18NW',
-}
+};
 
 const LeftMenu: SFC = () => {
   const [openRandomizers, setOpenRandomizers] = useState(false);
@@ -46,15 +46,15 @@ const LeftMenu: SFC = () => {
           {Object.entries(randomGames).sort(
             (a, b) => a[0].localeCompare(b[0])
           ).map(
-          g => <ListItemLink
-            to={`/random/${g[0]}/`}
-            primary={g[1]}
-            key={g[0]} />
+            g => <ListItemLink
+              to={`/random/${g[0]}/`}
+              primary={g[1]}
+              key={g[0]} />
           )}
         </List>
       </Collapse>
     </List>
-  </>
+  </>;
 };
 
 export default LeftMenu;

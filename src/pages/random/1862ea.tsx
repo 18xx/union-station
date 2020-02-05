@@ -55,7 +55,7 @@ const Page: React.SFC = () => {
     <h1>1862: Railway Mania in the Eastern Counties</h1>
 
     <OrderedList heading='Companies' list={pairs} />
-  </Layout>
+  </Layout>;
 };
 
 export default Page;

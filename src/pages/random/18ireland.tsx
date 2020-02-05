@@ -5,27 +5,27 @@ import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
 
 interface Private {
-  readonly number: number;
+  readonly num: number;
   readonly name: string;
 }
 
 const Page: React.SFC = () => {
   const privates: readonly string[] = [
-    { number: 1, name: 'Dalkey Atmospheric Railway (C: £20, R: £5)' },
-    { number: 11, name: 'Dublin and Kingstown Railway (C: £110, R: £20)' },
+    { num: 1, name: 'Dalkey Atmospheric Railway (C: £20, R: £5)' },
+    { num: 11, name: 'Dublin and Kingstown Railway (C: £110, R: £20)' },
   ].concat(sampleSize([
-    { number: 2, name: 'Donegal Railway (C: £30, R: £7)' },
-    { number: 3, name: 'Board of Works (C: £40, R: £9)' },
-    { number: 4, name: 'City of Dublin Steam Packet Company (C: £45, R: £10)' },
-    { number: 5, name: 'Tralee and Dingle Railway (C: £50, R: £10)' },
-    { number: 6, name: 'Drumglass Colliery Railway (C: £60, R: £12)' },
-    { number: 7, name: 'Trans-Atlantic Steam Packet Station (C: £75, R: £15)' },
-    { number: 8, name: 'River Shannon Shipping Company (C: £80, R: £10)' },
-    { number: 9, name: 'William Dargan Esq. (C: £90, R: £10)' },
-    { number: 10, name: 'The Irish Mail (C: £110, R: £20)' },
+    { num: 2, name: 'Donegal Railway (C: £30, R: £7)' },
+    { num: 3, name: 'Board of Works (C: £40, R: £9)' },
+    { num: 4, name: 'City of Dublin Steam Packet Company (C: £45, R: £10)' },
+    { num: 5, name: 'Tralee and Dingle Railway (C: £50, R: £10)' },
+    { num: 6, name: 'Drumglass Colliery Railway (C: £60, R: £12)' },
+    { num: 7, name: 'Trans-Atlantic Steam Packet Station (C: £75, R: £15)' },
+    { num: 8, name: 'River Shannon Shipping Company (C: £80, R: £10)' },
+    { num: 9, name: 'William Dargan Esq. (C: £90, R: £10)' },
+    { num: 10, name: 'The Irish Mail (C: £110, R: £20)' },
   ], 3)).sort(
-    (a: Private, b: Private) => a.number - b.number
-  ).map(p => `P${p.number} - ${p.name}`);
+    (a: Private, b: Private) => a.num - b.num
+  ).map(p => `P${p.num} - ${p.name}`);
 
   const companies: readonly string[] = [
     'DKR - Dublin & Kingstown Railway (Dublin, I11)',
@@ -50,7 +50,7 @@ const Page: React.SFC = () => {
 
     <OrderedList heading='Privates' list={privates} />
     <OrderedList heading='Companies' list={companies} />
-  </Layout>
-}
+  </Layout>;
+};
 
 export default Page;

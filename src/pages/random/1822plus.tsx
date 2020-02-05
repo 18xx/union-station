@@ -102,7 +102,7 @@ const Page: React.SFC = () => {
     <OrderedList heading='Private Box 1' list={privateBox1} />
     <OrderedList heading='Private Box 2' list={privateBox2} />
     <OrderedList heading='Private Box 3' list={privateBox3} />
-  </Layout>
+  </Layout>;
 };
 
 export default Page;

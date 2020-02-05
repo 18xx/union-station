@@ -5,8 +5,8 @@ import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
 import PlayerSelector from '../../components/player_selector';
 
-const MIN_PLAYERS: number = 3;
-const MAX_PLAYERS: number = 5;
+const MIN_PLAYERS = 3;
+const MAX_PLAYERS = 5;
 
 const Page: React.SFC = () => {
   const [numPlayers, setNumPlayers] = useState(MAX_PLAYERS);

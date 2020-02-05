@@ -30,6 +30,6 @@ const PlayerSelector: React.SFC<Props> = ({
         <Tab key={n} value={n} label={`${n} Player`} />
       ))}
     </Tabs>
-  </>
+  </>;
 };
 export default PlayerSelector;
