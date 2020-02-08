@@ -36,7 +36,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --cache",
     "lint:fix": "yarn lint --fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -56,6 +56,7 @@
     "@types/react-helmet": "^5.0.8",
     "@typescript-eslint/eslint-plugin-tslint": "^2.19.0",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-functional": "^3.0.1",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prefer-arrow": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.2",

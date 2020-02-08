@@ -16,9 +16,9 @@ import React, { SFC, useState } from 'react';
 
 import LeftMenu from './left_menu';
 
-interface Props extends WithStyles<typeof styles> {
+type Props = WithStyles & {
   readonly siteTitle: string;
-}
+};
 
 const styles: (theme: Theme) => StyleRules = theme =>
   createStyles({

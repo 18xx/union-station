@@ -5,11 +5,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from 'gatsby';
 import React, { SFC } from 'react';
 
-interface Props {
+type Props = {
   readonly icon?: JSX.Element;
   readonly primary: string;
   readonly to: string;
-}
+};
 
 const ListItemLink: SFC<Props> = ({ icon, primary, to }) => (
   <ListItem button={true} component={Link} to={to}>

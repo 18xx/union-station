@@ -4,10 +4,10 @@ import React from 'react';
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
 
-interface Private {
+type Private = {
   readonly num: number;
   readonly name: string;
-}
+};
 
 const Page: React.SFC = () => {
   const privates: readonly string[] = [

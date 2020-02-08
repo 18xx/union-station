@@ -1,9 +1,9 @@
 import React from 'react';
 
-interface OrderedListProps {
+type OrderedListProps = {
   readonly heading: string;
   readonly list: readonly string[];
-}
+};
 
 const OrderedList: React.SFC<OrderedListProps> = ({ heading, list }) => (
   <>

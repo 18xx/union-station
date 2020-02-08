@@ -44,15 +44,9 @@ const LeftMenu: SFC = () => {
         </ListItem>
         <Collapse in={openRandomizers} timeout="auto" unmountOnExit={true}>
           <List>
-            {Object.entries(randomGames)
-              .sort((a, b) => a[0].localeCompare(b[0]))
-              .map(g => (
-                <ListItemLink
-                  to={`/random/${g[0]}/`}
-                  primary={g[1]}
-                  key={g[0]}
-                />
-              ))}
+            {Object.entries(randomGames).map(g => (
+              <ListItemLink to={`/random/${g[0]}/`} primary={g[1]} key={g[0]} />
+            ))}
           </List>
         </Collapse>
       </List>

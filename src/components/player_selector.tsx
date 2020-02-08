@@ -4,12 +4,12 @@ import Tabs from '@material-ui/core/Tabs';
 import range from 'lodash.range';
 import React, { ChangeEvent, Dispatch, SetStateAction } from 'react';
 
-interface Props {
+type Props = {
   readonly initialValue: number;
   readonly minPlayers: number;
   readonly maxPlayers: number;
   readonly setNumPlayers: Dispatch<SetStateAction<number>>;
-}
+};
 
 const PlayerSelector: React.SFC<Props> = ({
   initialValue,

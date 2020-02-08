@@ -10,9 +10,9 @@ import Header from './header';
 
 import 'typeface-roboto';
 
-interface LayoutProps extends WithStyles<typeof styles> {
+type LayoutProps = WithStyles & {
   readonly children: readonly JSX.Element[];
-}
+};
 
 const styles: any = () =>
   createStyles({

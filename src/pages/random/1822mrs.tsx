@@ -8,10 +8,10 @@ import React, { ChangeEvent, SFC, useState } from 'react';
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
 
-interface Company {
+type Company = {
   readonly num: number;
   readonly name: string;
-}
+};
 
 const MODE_PRIVATES: Record<string, readonly number[]> = {
   advanced: [1, 2].concat(range(5, 15)),

@@ -4,6 +4,8 @@ module.exports = {
   },
   "extends": [
     "eslint:recommended",
+    "plugin:functional/external-recommended",
+    "plugin:functional/recommended",
     'plugin:prettier/recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
@@ -12,11 +14,11 @@ module.exports = {
   "ignorePatterns": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "tsconfig.json",
     "sourceType": "module"
   },
   "plugins": [
     "@typescript-eslint",
+    "functional",
   ],
   "rules": {
     "indent": [
@@ -167,7 +169,7 @@ module.exports = {
     "@typescript-eslint/ban-types": "error",
     "@typescript-eslint/class-name-casing": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
-    "@typescript-eslint/consistent-type-definitions": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
       {
@@ -287,6 +289,10 @@ module.exports = {
     "radix": "error",
     "space-before-function-paren": "off",
     "spaced-comment": "error",
+    "functional/functional-parameters": "off",
+    "functional/no-return-void": "off",
+    "functional/no-expression-statement": "off",
+
   },
   "settings": {
     "react": {
