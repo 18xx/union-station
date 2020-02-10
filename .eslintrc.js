@@ -30,58 +30,6 @@ module.exports = {
       "error",
       "always"
     ],
-    "@typescript-eslint/adjacent-overload-signatures": "error",
-    "@typescript-eslint/array-type": "error",
-    "@typescript-eslint/ban-types": "error",
-    "@typescript-eslint/class-name-casing": "error",
-    "@typescript-eslint/consistent-type-assertions": "error",
-    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-    "@typescript-eslint/explicit-member-accessibility": [
-      "error",
-      {
-        "accessibility": "explicit"
-      }
-    ],
-    "@typescript-eslint/indent": "off",
-    "@typescript-eslint/interface-name-prefix": "off",
-    "@typescript-eslint/member-delimiter-style": [
-      "off",
-      {
-        "multiline": {
-          "delimiter": "none",
-          "requireLast": true
-        },
-        "singleline": {
-          "delimiter": "semi",
-          "requireLast": false
-        }
-      }
-    ],
-    "@typescript-eslint/member-ordering": "error",
-    "@typescript-eslint/no-empty-function": "error",
-    "@typescript-eslint/no-empty-interface": "error",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-misused-new": "error",
-    "@typescript-eslint/no-namespace": "error",
-    "@typescript-eslint/no-parameter-properties": "off",
-    "@typescript-eslint/no-this-alias": "error",
-    "@typescript-eslint/no-use-before-define": "off",
-    "@typescript-eslint/no-var-requires": "error",
-    "@typescript-eslint/prefer-for-of": "error",
-    "@typescript-eslint/prefer-function-type": "error",
-    "@typescript-eslint/prefer-namespace-keyword": "error",
-    "@typescript-eslint/quotes": "off",
-    "@typescript-eslint/semi": [
-      "off",
-      null
-    ],
-    "@typescript-eslint/space-within-parens": [
-      "off",
-      "never"
-    ],
-    "@typescript-eslint/triple-slash-reference": "error",
-    "@typescript-eslint/type-annotation-spacing": "off",
-    "@typescript-eslint/unified-signatures": "error",
     "arrow-body-style": "error",
     "arrow-parens": [
       "off",
@@ -158,6 +106,17 @@ module.exports = {
     "functional/functional-parameters": "off",
     "functional/no-return-void": "off",
     "functional/no-expression-statement": "off",
+
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    // handled by prettier instead
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-extra-parens": "off",
+    "@typescript-eslint/no-magic-numbers": "off",
+    "@typescript-eslint/no-type-alias": "off",
+    "@typescript-eslint/quotes": ["error", "single"],
+    "@typescript-eslint/require-array-sort-compare": "off",
+    // Handled by tsconfig --strict instead
+    "@typescript-eslint/typedef": "off",
   },
   "settings": {
     "react": {
