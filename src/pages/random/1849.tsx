@@ -10,7 +10,7 @@ import OrderedList from '../../components/ordered_list';
 const Page: React.SFC = () => {
   const [scenario, setScenario] = useState(5);
 
-  const onChange: (event: ChangeEvent<{}>, value: number) => void = (
+  const onChange: (event: ChangeEvent<unknown>, value: number) => void = (
     _,
     value
   ) => {

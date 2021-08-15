@@ -11,7 +11,7 @@ import {
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
-import { GithubCircle } from 'mdi-material-ui';
+import { Github } from 'mdi-material-ui';
 import React, { SFC, useState } from 'react';
 
 import LeftMenu from './left_menu';
@@ -20,7 +20,7 @@ type Props = WithStyles & {
   readonly siteTitle: string;
 };
 
-const styles: (theme: Theme) => StyleRules = theme =>
+const styles = (theme: Theme): StyleRules =>
   createStyles({
     grow: {
       flexGrow: 1,
@@ -52,7 +52,7 @@ const Header: SFC<Props> = ({ classes, siteTitle }) => {
             className={classes.headerLink}
           >
             <IconButton color="inherit" aria-label="GitHub Source">
-              <GithubCircle />
+              <Github />
             </IconButton>
           </a>
         </Toolbar>

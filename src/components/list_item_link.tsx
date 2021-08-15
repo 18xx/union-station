@@ -9,12 +9,13 @@ type Props = {
   readonly icon?: JSX.Element;
   readonly primary: string;
   readonly to: string;
+  readonly inset: boolean;
 };
 
-const ListItemLink: SFC<Props> = ({ icon, primary, to }) => (
+const ListItemLink: SFC<Props> = ({ icon, inset, primary, to }) => (
   <ListItem button={true} component={Link} to={to}>
     {icon && <ListItemIcon>{icon}</ListItemIcon>}
-    <ListItemText inset={true} primary={primary} />
+    <ListItemText inset={inset} primary={primary} />
   </ListItem>
 );
 
