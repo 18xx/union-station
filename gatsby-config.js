@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
     {
@@ -15,7 +16,6 @@ module.exports = {
         lang: 'en',
       },
     },
-    `gatsby-plugin-favicon`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,6 +25,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        icon: `src/favicon.png`,
       },
     },
     'gatsby-plugin-offline',

@@ -37,7 +37,7 @@ const Page: React.SFC = () => {
       )
     )
     .sort((a: Private, b: Private) => a.num - b.num)
-    .map(p => `P${p.num} - ${p.name}`);
+    .map((p) => `P${p.num} - ${p.name}`);
 
   const companies: readonly string[] = [
     'DKR - Dublin & Kingstown Railway (Dublin, I11)',

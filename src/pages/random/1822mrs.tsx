@@ -57,8 +57,8 @@ const Page: SFC = () => {
   ];
 
   const minors: readonly string[] = minorCompanies
-    .filter(c => c.num === startMinor)
-    .concat(shuffle(minorCompanies.filter(c => c.num !== startMinor)))
+    .filter((c) => c.num === startMinor)
+    .concat(shuffle(minorCompanies.filter((c) => c.num !== startMinor)))
     .map(({ num, name }) => `M${num} - ${name}`);
 
   const starterPrivate: Company = { num: 1, name: 'permanent 5-train' };
@@ -86,11 +86,11 @@ const Page: SFC = () => {
 
   const privates: readonly string[] = [starterPrivate]
     .concat(
-      shuffle(privateCompanies.filter(c => privatesInPlay.includes(c.num)))
+      shuffle(privateCompanies.filter((c) => privatesInPlay.includes(c.num)))
     )
     .map(({ num, name }) => `P${num} - ${name}`);
 
-  const onChange: (event: ChangeEvent<{}>, value: string) => void = (
+  const onChange: (event: ChangeEvent<unknown>, value: string) => void = (
     _,
     value
   ) => {

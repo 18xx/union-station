@@ -34,7 +34,7 @@ const LeftMenu: SFC = () => {
   return (
     <>
       <List>
-        <ListItemLink primary="Home" to="/" icon={<Home />} />
+        <ListItemLink primary="Home" to="/" icon={<Home />} inset={false} />
 
         <ListItem button={true} onClick={randomizersOnClick}>
           <ListItemIcon>
@@ -44,8 +44,13 @@ const LeftMenu: SFC = () => {
         </ListItem>
         <Collapse in={openRandomizers} timeout="auto" unmountOnExit={true}>
           <List>
-            {Object.entries(randomGames).map(g => (
-              <ListItemLink to={`/random/${g[0]}/`} primary={g[1]} key={g[0]} />
+            {Object.entries(randomGames).map((g) => (
+              <ListItemLink
+                to={`/random/${g[0]}/`}
+                primary={g[1]}
+                key={g[0]}
+                inset={true}
+              />
             ))}
           </List>
         </Collapse>
