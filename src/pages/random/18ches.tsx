@@ -3,7 +3,7 @@ import Layout from '../../components/layout';
 import shuffle from 'lodash.shuffle';
 import React from 'react';
 
-const Page: React.SFC = () => {
+const Page: React.VFC = () => {
   const companies: readonly string[] = shuffle([
     'B&O - Baltimore & Ohio',
     'C&A - Camden & Amboy',

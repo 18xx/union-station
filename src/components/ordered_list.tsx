@@ -5,7 +5,7 @@ type OrderedListProps = {
   readonly list: readonly string[];
 };
 
-const OrderedList: React.SFC<OrderedListProps> = ({ heading, list }) => (
+const OrderedList: React.VFC<OrderedListProps> = ({ heading, list }) => (
   <>
     <h3>{heading}</h3>
     <ol>

@@ -8,7 +8,7 @@ import PlayerSelector from '../../components/player_selector';
 const MIN_PLAYERS = 3;
 const MAX_PLAYERS = 5;
 
-const Page: React.SFC = () => {
+const Page: React.VFC = () => {
   const [numPlayers, setNumPlayers] = useState(MAX_PLAYERS);
 
   const companies: readonly string[] = sampleSize(

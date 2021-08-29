@@ -7,7 +7,7 @@ import React, { ChangeEvent, useState } from 'react';
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
 
-const Page: React.SFC = () => {
+const Page: React.VFC = () => {
   const [scenario, setScenario] = useState(5);
 
   const onChange: (event: ChangeEvent<unknown>, value: number) => void = (

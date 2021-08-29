@@ -3,7 +3,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import { Link } from 'gatsby';
-import React, { SFC } from 'react';
+import React from 'react';
 
 type Props = {
   readonly icon?: JSX.Element;
@@ -12,7 +12,7 @@ type Props = {
   readonly inset: boolean;
 };
 
-const ListItemLink: SFC<Props> = ({ icon, inset, primary, to }) => (
+const ListItemLink: React.VFC<Props> = ({ icon, inset, primary, to }) => (
   <ListItem button={true} component={Link} to={to}>
     {icon && <ListItemIcon>{icon}</ListItemIcon>}
     <ListItemText inset={inset} primary={primary} />
