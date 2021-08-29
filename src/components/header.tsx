@@ -12,7 +12,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Github } from 'mdi-material-ui';
-import React, { SFC, useState } from 'react';
+import React, { VFC, useState } from 'react';
 
 import LeftMenu from './left_menu';
 
@@ -31,7 +31,7 @@ const styles = (theme: Theme): StyleRules =>
     },
   });
 
-const Header: SFC<Props> = ({ classes, siteTitle }) => {
+const Header: VFC<Props> = ({ classes, siteTitle }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const onClose: () => void = () => setMenuOpen(false);

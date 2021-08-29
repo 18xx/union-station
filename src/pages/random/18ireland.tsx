@@ -9,7 +9,7 @@ type Private = {
   readonly name: string;
 };
 
-const Page: React.SFC = () => {
+const Page: React.VFC = () => {
   const privates: readonly string[] = [
     { num: 1, name: 'Dalkey Atmospheric Railway (C: £20, R: £5)' },
     { num: 11, name: 'Dublin and Kingstown Railway (C: £110, R: £20)' },

@@ -11,7 +11,7 @@ type Props = {
   readonly setNumPlayers: Dispatch<SetStateAction<number>>;
 };
 
-const PlayerSelector: React.SFC<Props> = ({
+const PlayerSelector: React.VFC<Props> = ({
   initialValue,
   minPlayers,
   maxPlayers,

@@ -22,7 +22,7 @@ const companies: readonly string[] = shuffle([
   'WNR - Worcester, Nashua and Rochester Railroad',
 ]);
 
-const Page: React.SFC = () => (
+const Page: React.VFC = () => (
   <Layout>
     <h1>18NewEngland</h1>
 

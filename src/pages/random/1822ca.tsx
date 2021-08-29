@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
 
-const Page: React.SFC = () => {
+const Page: React.VFC = () => {
   const concessions: readonly string[] = [
     'CPR - Canadian Pacific Railway',
   ].concat(

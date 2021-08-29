@@ -3,7 +3,7 @@ import Tabs from '@material-ui/core/Tabs';
 
 import range from 'lodash.range';
 import shuffle from 'lodash.shuffle';
-import React, { ChangeEvent, SFC, useState } from 'react';
+import React, { ChangeEvent, VFC, useState } from 'react';
 
 import Layout from '../../components/layout';
 import OrderedList from '../../components/ordered_list';
@@ -19,7 +19,7 @@ const MODE_PRIVATES: Record<string, readonly number[]> = {
   starter: range(1, 13),
 };
 
-const Page: SFC = () => {
+const Page: VFC = () => {
   const [mode, setMode] = useState('standard');
 
   const concessions: readonly string[] = [

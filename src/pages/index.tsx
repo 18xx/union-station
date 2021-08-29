@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-const IndexPage: React.SFC = () => (
+const IndexPage: React.VFC = () => (
   <Layout>
     <h2>Welcome to 18xx.online!</h2>
     <p>

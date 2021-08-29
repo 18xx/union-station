@@ -4,7 +4,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { DiceMultiple, Home } from 'mdi-material-ui';
-import React, { SFC, useState } from 'react';
+import React, { useState } from 'react';
 
 import ListItemLink from './list_item_link';
 
@@ -24,7 +24,7 @@ const randomGames: Record<string, string> = {
   '18nw': '18NW',
 };
 
-const LeftMenu: SFC = () => {
+const LeftMenu: React.VFC = () => {
   const [openRandomizers, setOpenRandomizers] = useState(false);
 
   const randomizersOnClick: () => void = () => {

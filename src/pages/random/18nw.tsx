@@ -5,7 +5,7 @@ import OrderedList from '../../components/ordered_list';
 
 import sampleSize from 'lodash.samplesize';
 
-const Page: React.SFC = () => {
+const Page: React.VFC = () => {
   const privates: readonly string[] = [
     'P1 - IRNC',
     'P2 - Mine',

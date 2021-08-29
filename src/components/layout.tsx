@@ -63,7 +63,7 @@ const renderFn: (
   return mainSiteRender;
 };
 
-const Layout: React.SFC<LayoutProps> = ({ children, classes }) => (
+const Layout: React.VFC<LayoutProps> = ({ children, classes }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
