@@ -35,7 +35,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop --port 8001",
+    "develop": "gatsby develop --port 3000 --host 0.0.0.0",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx",
     "lint:fix": "yarn lint --fix",
     "start": "npm run develop",
@@ -69,5 +69,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "engines": { "node" : ">=14.17.5" }
+  "engines": {
+    "node": ">=14.17.5"
+  }
 }
