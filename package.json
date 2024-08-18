@@ -70,6 +70,6 @@
     "trailingComma": "es5"
   },
   "engines": {
-    "node": ">=14.17.5"
+    "node": ">=18.17"
   }
 }
